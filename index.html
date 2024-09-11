@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- 以下のlangは検索エンジンやスクリーンリーダーの支援技術に役立つので、ちゃんとアプリケーションの特性に合った言語を記述する -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport=表示領域のことで、デバイスの大きさに合わせるようになっている。initial-scale=1.0は拡大縮小をしていない状態（通常）ということ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titleタグはSEOに影響する重要なタグ。そのアプリケーションの名前を付けること -->
+    <title>TODOアプリ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-area">
+            <input id="add-text" placeholder="todo名入力">
+            <button id="add-button">追加</button>
+            <span class="error-message" id="todo-input-error"></span>
+        </div>
+        <div class="imcomplete-area">
+            <p>未完了TODO</p>
+            <ul id="imcomplete-list">
+            </ul>
+        </div>
+        <div class="complete-area">
+            <p>完了したTODO</p>
+            <ul id="complete-list">
+            </ul>
+        </div>
+    </div>
+    <!-- もしtodo.jsがimportを使うなら、type=moduleが必要となる -->
+    <script type="module" src="js/todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* 
+ * 9月6日、久しぶりにインライン要素、ブロック要素、要素間の配置など考えることができた。Reactで開発してもこの辺りは必須知識だからちゃんと身に付ける 
+ * →codestepでhtml、cssを定着させるのありだよね！やっぱり、手をひたすらに動かさないと無理だ（https://code-jump.com/）
+*/
+body, html {
+    /* 高さをちゃんと指定しないと、中央揃え適用されない。縦幅が足りなくて中央に要素を持ってこれないんだと思う */
+    height: 100%;
+}
+.container {
+    display:flex;
+    /* これで縦並びにできる（flexってデフォルトは横並びなので） */
+    flex-direction: column;
+    /* 横並びの中央揃え */
+    align-items:center;
+    /* 縦並びの中央揃え */
+    justify-content: center;
+    row-gap: 16px;
+}
+.input-area {
+    background-color: aquamarine;
+    border-radius: 8px;
+    width: 800px;
+    padding: 16px;
+    /* text-alignはインライン要素 */
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    display: none; /* 初期状態で非表示 */
+  }
+
+.imcomplete-area {
+    text-align: center;
+    border: 2px solid aqua;
+    width: 800px;
+    padding: 16px;
+}
+
+.imcomplete-todo {
+    /* デフォルトは横並びで左詰め */
+    display: flex;
+    column-gap: 8px;
+}
+
+.complete-area {
+    text-align: center;
+    border: 2px solid aqua;
+    background-color: azure;
+    width: 800px;    
+    padding: 16px;
+}
+.complete-todo {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+
+input {
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+}
+
+button {
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    cursor:pointer
+}
